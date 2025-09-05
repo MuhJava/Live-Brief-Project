@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<GridPane alignment="TOP_LEFT" hgap="50" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sdk11element010.ScenarioFormController">
+    <padding>
+        <Insets left="20" top="20" />
+    </padding>
+
+    <Label alignment="CENTER_LEFT" text="Please select a client : " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <ComboBox fx:id="chosen_client_analysis" layoutY="25.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Yourself" />
+                <String fx:value="Your partner" />
+                <String fx:value="Joint" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Label alignment="CENTER_LEFT" text="First Name : " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="first_name_analysis" GridPane.columnIndex="1" GridPane.rowIndex="1" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label alignment="CENTER_LEFT" text="Surname : " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="surname_analysis" GridPane.columnIndex="1" GridPane.rowIndex="3" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError1" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <Label alignment="CENTER_LEFT" text="Marital status : " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <ComboBox fx:id="marital_status_analysis" layoutY="25.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" onMouseClicked="#keyRelease">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Married" />
+                <String fx:value="Civil Partnership" />
+                <String fx:value="Single" />
+                <String fx:value="Blended" />
+                <String fx:value="Cohabiting" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <Label fx:id="maritalStatusError" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+    <Label alignment="CENTER_LEFT" text="Age : " GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <TextField fx:id="Age_analysis" GridPane.columnIndex="1" GridPane.rowIndex="7" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError2" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+    <Label alignment="CENTER_LEFT" text="UK Domicle for IHT: "  GridPane.columnIndex="0" GridPane.rowIndex="9" />
+    <fx:define><ToggleGroup fx:id="Group1" /></fx:define>
+    <VBox GridPane.rowIndex="9" GridPane.columnIndex="1">
+        <RadioButton fx:id="IHTyes" text="Yes" toggleGroup="$Group1" onMouseClicked="#keyRelease"/>
+        <RadioButton fx:id="IHTno" text="No" toggleGroup="$Group1" onMouseClicked="#keyRelease" selected="true"/>
+    </VBox>
+
+    <Label alignment="CENTER_LEFT" text="If widowed, was NRB used:"  GridPane.columnIndex="0" GridPane.rowIndex="10" />
+    <fx:define><ToggleGroup fx:id="Group2"/></fx:define>
+    <VBox GridPane.rowIndex="10" GridPane.columnIndex="1">
+        <RadioButton fx:id="Yes" text="Yes" toggleGroup="$Group2" onMouseClicked="#keyRelease"/>
+        <RadioButton fx:id="No" text="No" toggleGroup="$Group2" onMouseClicked="#keyRelease" selected="true"/>
+    </VBox>
+
+    <Label alignment="CENTER_LEFT" text="LPAs in place: "  GridPane.columnIndex="0" GridPane.rowIndex="11" />
+    <fx:define><ToggleGroup fx:id="Group3"/></fx:define>
+    <VBox GridPane.rowIndex="11" GridPane.columnIndex="1">
+        <RadioButton text="Yes" toggleGroup="$Group3" onMouseClicked="#keyRelease"/>
+        <RadioButton text="No" toggleGroup="$Group3" onMouseClicked="#keyRelease" selected="true"/>
+    </VBox>
+
+    <Label alignment="CENTER_LEFT" text="Bloodline protection: "  GridPane.columnIndex="0" GridPane.rowIndex="12" />
+    <fx:define><ToggleGroup fx:id="Group4"/></fx:define>
+    <VBox GridPane.rowIndex="12" GridPane.columnIndex="1">
+        <RadioButton text="Yes" toggleGroup="$Group4" onMouseClicked="#keyRelease"/>
+        <RadioButton text="No" toggleGroup="$Group4" onMouseClicked="#keyRelease" selected="true"/>
+    </VBox>
+
+    <Label alignment="CENTER_LEFT" text="Other aims : " GridPane.columnIndex="0" GridPane.rowIndex="13" />
+    <TextField fx:id="Custom_aims_analysis" GridPane.columnIndex="1" GridPane.rowIndex="13" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError7" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+
+    <Label alignment="CENTER_LEFT" text="Primary property value : " GridPane.columnIndex="0" GridPane.rowIndex="15" />
+    <TextField fx:id="Primary_property_analysis" GridPane.columnIndex="1" GridPane.rowIndex="15" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError8" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+
+    <Label alignment="CENTER_LEFT" text="Outstanding mortgage : " GridPane.columnIndex="0" GridPane.rowIndex="17" />
+    <TextField fx:id="primary_mortgage_analysis" GridPane.columnIndex="1" GridPane.rowIndex="17" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError9" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+
+    <Label alignment="CENTER_LEFT" text="Time until mortgage paid off: " GridPane.columnIndex="0" GridPane.rowIndex="19" />
+    <TextField fx:id="primary_mortgage_years_analysis" GridPane.columnIndex="1" GridPane.rowIndex="19" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError10" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+
+    <Label alignment="CENTER_LEFT" text="Uk holiday property value : " GridPane.columnIndex="0" GridPane.rowIndex="21" />
+    <TextField fx:id="Uk_holiday_property_analysis" GridPane.columnIndex="1" GridPane.rowIndex="21" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError11" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="22" />
+
+    <Label alignment="CENTER_LEFT" text="Outstanding mortgage : " GridPane.columnIndex="0" GridPane.rowIndex="23" />
+    <TextField fx:id="holiday_mortgage_analysis" GridPane.columnIndex="1" GridPane.rowIndex="23" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError12" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="24" />
+
+    <Label alignment="CENTER_LEFT" text="Time until mortgage paid off: " GridPane.columnIndex="2" GridPane.rowIndex="0" />
+    <TextField fx:id="holiday_mortgage_years_analysis" GridPane.columnIndex="3" GridPane.rowIndex="0" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError13" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+    <Label alignment="CENTER_LEFT" text="Buy-to-let property value : " GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <TextField fx:id="BTL_property_analysis" GridPane.columnIndex="3" GridPane.rowIndex="2" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError14" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+    <Label alignment="CENTER_LEFT" text="Outstanding mortgage : " GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <TextField fx:id="BTL_mortgage_analysis" GridPane.columnIndex="3" GridPane.rowIndex="4" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError15" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+    <Label alignment="CENTER_LEFT" text="Time until mortgage paid off: " GridPane.columnIndex="2" GridPane.rowIndex="6" />
+    <TextField fx:id="BTL_mortgage_years_analysis" GridPane.columnIndex="3" GridPane.rowIndex="6" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError16" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+
+    <Label alignment="CENTER_LEFT" text="Overseas property value : " GridPane.columnIndex="2" GridPane.rowIndex="8" />
+    <TextField fx:id="overseas_property_analysis" GridPane.columnIndex="3" GridPane.rowIndex="8" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError17" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+
+    <Label alignment="CENTER_LEFT" text="Outstanding mortgage : " GridPane.columnIndex="2" GridPane.rowIndex="10" />
+    <TextField fx:id="overseas_mortgage_analysis" GridPane.columnIndex="3" GridPane.rowIndex="10" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError18" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+
+    <Label alignment="CENTER_LEFT" text="Time until mortgage paid off: " GridPane.columnIndex="2" GridPane.rowIndex="12" />
+    <TextField fx:id="overseas_mortgage_years_analysis" GridPane.columnIndex="3" GridPane.rowIndex="12" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError19" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="13" />
+
+    <Label alignment="CENTER_LEFT" text="Is there a foreign will in place: "  GridPane.columnIndex="2" GridPane.rowIndex="14" />
+    <fx:define><ToggleGroup fx:id="Group5"/></fx:define>
+    <VBox GridPane.rowIndex="14" GridPane.columnIndex="3">
+        <RadioButton text="Yes" toggleGroup="$Group5" onMouseClicked="#keyRelease"/>
+        <RadioButton text="No" toggleGroup="$Group5" onMouseClicked="#keyRelease" selected="true"/>
+    </VBox>
+
+    <Label alignment="CENTER_LEFT" text="BPR qualifying business assets value : " GridPane.columnIndex="2" GridPane.rowIndex="15" />
+    <TextField fx:id="BPR_assets_analysis" GridPane.columnIndex="3" GridPane.rowIndex="15" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError21" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="16" />
+
+    <Label alignment="CENTER_LEFT" text="Non BPR business assets : " GridPane.columnIndex="2" GridPane.rowIndex="17" />
+    <TextField fx:id="Non_BPR_assets_analysis" GridPane.columnIndex="3" GridPane.rowIndex="17" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError22" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="18" />
+
+    <Label alignment="CENTER_LEFT" text="Nature of investments : " GridPane.columnIndex="2" GridPane.rowIndex="19" />
+    <TextField fx:id="Nature_of_investments_analysis" prefWidth="200" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="19" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError23" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="20" />
+
+    <Label alignment="CENTER_LEFT" text="Investments value : " GridPane.columnIndex="2" GridPane.rowIndex="21" />
+    <TextField fx:id="investments_analysis" GridPane.columnIndex="3" GridPane.rowIndex="21" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError24" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="22" />
+
+    <Label alignment="CENTER_LEFT" text="Value of your savings and cash : " GridPane.columnIndex="4" GridPane.rowIndex="0" />
+    <TextField fx:id="savings_and_cash_analysis" GridPane.columnIndex="5" GridPane.rowIndex="0" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError25" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+
+    <Label alignment="CENTER_LEFT" text="Personal life cover value : " GridPane.columnIndex="4" GridPane.rowIndex="2" />
+    <TextField fx:id="life_cover_analysis" GridPane.columnIndex="5" GridPane.rowIndex="2" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError26" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+
+    <Label alignment="CENTER_LEFT" text="Is life cover already in trust: "  GridPane.columnIndex="4" GridPane.rowIndex="4" />
+    <fx:define><ToggleGroup fx:id="Group6"/></fx:define>
+    <VBox GridPane.rowIndex="4" GridPane.columnIndex="5">
+        <RadioButton text="Yes" toggleGroup="$Group6" onMouseClicked="#keyRelease"/>
+        <RadioButton text="No" toggleGroup="$Group6" onMouseClicked="#keyRelease" selected="true"/>
+    </VBox>
+
+    <Label alignment="CENTER_LEFT" text="Pensions/SIPP value : " GridPane.columnIndex="4" GridPane.rowIndex="7" />
+    <TextField fx:id="pension_SIPP_analysis" GridPane.columnIndex="5" GridPane.rowIndex="7" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError28" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+
+    <Label alignment="CENTER_LEFT" text="Death benefit directed to trust: "  GridPane.columnIndex="4" GridPane.rowIndex="9" />
+    <fx:define><ToggleGroup fx:id="Group7"/></fx:define>
+    <VBox GridPane.rowIndex="9" GridPane.columnIndex="5">
+        <RadioButton text="Yes" toggleGroup="$Group7" onMouseClicked="#keyRelease"/>
+        <RadioButton text="No" toggleGroup="$Group7" onMouseClicked="#keyRelease" selected="true"/>
+    </VBox>
+
+    <Label alignment="CENTER_LEFT" text="Death in service value : " GridPane.columnIndex="4" GridPane.rowIndex="12" />
+    <TextField fx:id="death_service_analysis" GridPane.columnIndex="5" GridPane.rowIndex="12" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError30" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="13" />
+
+    <Label alignment="CENTER_LEFT" text="Death in service directed to trust: "  GridPane.columnIndex="4" GridPane.rowIndex="14" />
+    <fx:define><ToggleGroup fx:id="Group8"/></fx:define>
+    <VBox GridPane.rowIndex="14" GridPane.columnIndex="5">
+        <RadioButton text="Yes" toggleGroup="$Group8" onMouseClicked="#keyRelease"/>
+        <RadioButton text="No" toggleGroup="$Group8" onMouseClicked="#keyRelease" selected="true"/>
+    </VBox>
+
+    <Label alignment="CENTER_LEFT" text="Are you expecting an inheritance: "  GridPane.columnIndex="4" GridPane.rowIndex="17" />
+    <fx:define><ToggleGroup fx:id="Group9"/></fx:define>
+    <VBox GridPane.rowIndex="17" GridPane.columnIndex="5">
+        <RadioButton text="Yes" toggleGroup="$Group9" onMouseClicked="#keyRelease"/>
+        <RadioButton text="No" toggleGroup="$Group9" onMouseClicked="#keyRelease" selected="true"/>
+    </VBox>
+
+    <Label alignment="CENTER_LEFT" text="Roughly how much : " GridPane.columnIndex="4" GridPane.rowIndex="20" />
+    <TextField fx:id="inheritance_value_analysis" GridPane.columnIndex="5" GridPane.rowIndex="20" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError33" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="21" />
+
+    <Label alignment="CENTER_LEFT" text="Add a child : " GridPane.columnIndex="4" GridPane.rowIndex="22" />
+    <Button onAction="#onAddButtonClick" prefWidth="90" text="Add" GridPane.columnIndex="5" GridPane.rowIndex="22" />
+
+    <Button fx:id="submitButton" onAction="#onSubmitButtonClick" prefWidth="90" text="Submit" GridPane.columnIndex="4" GridPane.rowIndex="24" />
+    <Button onAction="#onClearButtonClick" prefWidth="90" text="Clear" GridPane.columnIndex="5" GridPane.rowIndex="24" />
+
+    <Label fx:id="submitLabel" prefWidth="200" text="" GridPane.columnIndex="4" GridPane.rowIndex="23" />
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+
+
+</GridPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane alignment="TOP_LEFT" hgap="50" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sdk11element010.ChildController">
+    <padding>
+        <Insets left="20" top="20" />
+    </padding>
+
+    <Label alignment="CENTER_LEFT" text="First Name : " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="child_first_name_value" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+    <Label alignment="CENTER_LEFT" text="Surname : " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="child_surname_value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label alignment="CENTER_LEFT" text="Date of birth : " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <DatePicker fx:id="child_dateofbirth_value" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label alignment="CENTER_LEFT" text="Country of residence : " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="child_country_of_residence_value" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label alignment="CENTER_LEFT" text="Belongs to : " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <fx:define><ToggleGroup fx:id="Group1"/></fx:define>
+    <VBox GridPane.rowIndex="5" GridPane.columnIndex="1">
+        <RadioButton GridPane.rowIndex="2" GridPane.columnIndex="0" text="You" toggleGroup="$Group1" selected="true"/>
+        <RadioButton GridPane.rowIndex="3" GridPane.columnIndex="0" text="Partner" toggleGroup="$Group1"/>
+        <RadioButton GridPane.rowIndex="4" GridPane.columnIndex="0" text="Joint" toggleGroup="$Group1"/>
+    </VBox>
+
+
+
+
+    <Button onAction="#onSaveButtonClick" prefWidth="90" text="Save" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+    <Button onAction="#onClearButtonClick" prefWidth="90" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+
+    <Label fx:id="saveLabel" prefWidth="200" text="" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+
+</GridPane>

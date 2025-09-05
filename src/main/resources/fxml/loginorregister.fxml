@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="TOP_LEFT" hgap="50" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sdk11element010.LoginRegisterController">
+    <padding>
+        <Insets left="20" top="20" />
+    </padding>
+
+    <Label alignment="CENTER_LEFT" text="Email : " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="email_value" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+    <Label alignment="CENTER_LEFT" text="Password : " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="password_value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Button onAction="#onRegisterButtonClick" prefWidth="90" text="Register" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <Button onAction="#onLoginButtonClick" prefWidth="90" text="Log in" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Button onAction="#onClearButtonClick" prefWidth="90" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+    <Label fx:id="resultLabel" prefWidth="230" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+
+</GridPane>

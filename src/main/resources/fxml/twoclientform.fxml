@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="TOP_LEFT" hgap="50" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sdk11element010.TwoClientFormController">
+    <padding>
+        <Insets left="20" top="20" />
+    </padding>
+
+    <Label alignment="CENTER_LEFT" text="First Name : " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="first_name_value" GridPane.columnIndex="1" GridPane.rowIndex="0" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label alignment="CENTER_LEFT" text="Surname : " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="surname_value" GridPane.columnIndex="1" GridPane.rowIndex="2" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError1" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label alignment="CENTER_LEFT" text="Marital status : " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <ComboBox fx:id="marital_status_value" layoutY="25.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Married" />
+                <String fx:value="Civil Partnership" />
+                <String fx:value="Single" />
+                <String fx:value="Blended" />
+                <String fx:value="Cohabiting" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <Label fx:id="maritalStatusError" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <Label alignment="CENTER_LEFT" text="Date of birth : " GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <DatePicker fx:id="dateofbirth_value" GridPane.columnIndex="1" GridPane.rowIndex="6" onMouseClicked="#keyRelease"/>
+    <Label fx:id="varcharError2" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+    <Label alignment="CENTER_LEFT" text="Partner first name : " GridPane.columnIndex="4" GridPane.rowIndex="0" />
+    <TextField fx:id="partner_first_name_value" GridPane.columnIndex="5" GridPane.rowIndex="0" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError3" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+
+    <Label alignment="CENTER_LEFT" text="Partner surname : " GridPane.columnIndex="4" GridPane.rowIndex="2" />
+    <TextField fx:id="partner_surname_value" GridPane.columnIndex="5" GridPane.rowIndex="2" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError4" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+
+    <Label alignment="CENTER_LEFT" text="Your primary property value : " GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <TextField fx:id="client_gross_property_value" GridPane.columnIndex="1" GridPane.rowIndex="7" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError5" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+    <Label alignment="CENTER_LEFT" text="Your primary property value minus remaining payments : " GridPane.columnIndex="0" GridPane.rowIndex="9" />
+    <TextField fx:id="client_net_property_value" GridPane.columnIndex="1" GridPane.rowIndex="9" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError6" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+    <Label alignment="CENTER_LEFT" text="Your percentage of equity : " GridPane.columnIndex="0" GridPane.rowIndex="11" />
+    <TextField fx:id="percentage_equity_value" GridPane.columnIndex="1" GridPane.rowIndex="11" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError7" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+
+    <Label alignment="CENTER_LEFT" text="Partners percentage of equity : " GridPane.columnIndex="4" GridPane.rowIndex="4" />
+    <TextField fx:id="partner_percentage_equity_value" GridPane.columnIndex="5" GridPane.rowIndex="4" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError8" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+
+    <Label alignment="CENTER_LEFT" text="Total value of holiday homes : " GridPane.columnIndex="0" GridPane.rowIndex="13" />
+    <TextField fx:id="total_holiday_homes_value" GridPane.columnIndex="1" GridPane.rowIndex="13" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError9" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+
+    <Label alignment="CENTER_LEFT" text="Your holiday homes value minus remaining payments : " GridPane.columnIndex="0" GridPane.rowIndex="15" />
+    <TextField fx:id="net_total_holiday_homes_value" GridPane.columnIndex="1" GridPane.rowIndex="15" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError10" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+
+    <Label alignment="CENTER_LEFT" text="Your buy to let property value : " GridPane.columnIndex="2" GridPane.rowIndex="7" />
+    <TextField fx:id="btl_property_value" GridPane.columnIndex="3" GridPane.rowIndex="7" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError11" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+
+    <Label alignment="CENTER_LEFT" text="Your buy to let value minus remaining payments : " GridPane.columnIndex="2" GridPane.rowIndex="9" />
+    <TextField fx:id="net_btl_property_value" GridPane.columnIndex="3" GridPane.rowIndex="9" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError12" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+
+    <Label alignment="CENTER_LEFT" text="Your percentage of buy to let assets: " GridPane.columnIndex="2" GridPane.rowIndex="11" />
+    <TextField fx:id="percentage_btl_value" GridPane.columnIndex="3" GridPane.rowIndex="11" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError13" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="12" />
+
+    <Label alignment="CENTER_LEFT" text="Partners percentage of buy to let assets : " GridPane.columnIndex="4" GridPane.rowIndex="6" />
+    <TextField fx:id="partners_percentage_btl_value" GridPane.columnIndex="5" GridPane.rowIndex="6" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError14" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+
+    <Label alignment="CENTER_LEFT" text="Value of your savings and cash : " GridPane.columnIndex="0" GridPane.rowIndex="17" />
+    <TextField fx:id="savings_and_cash_value" GridPane.columnIndex="1" GridPane.rowIndex="17" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError15" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+
+    <Label alignment="CENTER_LEFT" text="Savings and cash in your name : " GridPane.columnIndex="2" GridPane.rowIndex="17" />
+    <TextField fx:id="savings_inname_value" GridPane.columnIndex="3" GridPane.rowIndex="17" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError16" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="18" />
+
+    <Label alignment="CENTER_LEFT" text="Savings and cash in partners name : " GridPane.columnIndex="4" GridPane.rowIndex="9" />
+    <TextField fx:id="savings_partners_name_value" GridPane.columnIndex="5" GridPane.rowIndex="9" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError17" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+
+    <Label alignment="CENTER_LEFT" text="Joint savings: " GridPane.columnIndex="4" GridPane.rowIndex="11" />
+    <TextField fx:id="joint_savings_value" GridPane.columnIndex="5" GridPane.rowIndex="11" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError18" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="12" />
+
+    <Label alignment="CENTER_LEFT" text="Investments value in your name : " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <TextField fx:id="investments_inname_value" GridPane.columnIndex="3" GridPane.rowIndex="1" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError19" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+    <Label alignment="CENTER_LEFT" text="Investments value in partners name : " GridPane.columnIndex="4" GridPane.rowIndex="13" />
+    <TextField fx:id="investments_partners_name_value" GridPane.columnIndex="5" GridPane.rowIndex="13" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError20" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="14" />
+
+    <Label alignment="CENTER_LEFT" text="Joint investments value: " GridPane.columnIndex="4" GridPane.rowIndex="15" />
+    <TextField fx:id="joint_investments_value" GridPane.columnIndex="5" GridPane.rowIndex="15" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError21" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="16" />
+
+    <Label alignment="CENTER_LEFT" text="Business value in your name: " GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <TextField fx:id="business_value_inname_value" GridPane.columnIndex="3" GridPane.rowIndex="3" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError22" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+    <Label alignment="CENTER_LEFT" text="Business value in partners name : " GridPane.columnIndex="4" GridPane.rowIndex="17" />
+    <TextField fx:id="business_value_partners_name_value" GridPane.columnIndex="5" GridPane.rowIndex="17" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError23" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="18" />
+
+    <Label alignment="CENTER_LEFT" text="Joint business assets value : " GridPane.columnIndex="4" GridPane.rowIndex="19" />
+    <TextField fx:id="business_value_joint_value" GridPane.columnIndex="5" GridPane.rowIndex="19" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError24" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="20" />
+
+    <Label alignment="CENTER_LEFT" text="Life cover value on death: " GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    <TextField fx:id="life_cover_value" GridPane.columnIndex="3" GridPane.rowIndex="5" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError25" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+
+    <Label alignment="CENTER_LEFT" text="Life cover value on partners death: " GridPane.columnIndex="4" GridPane.rowIndex="21" />
+    <TextField fx:id="partners_life_cover_value" GridPane.columnIndex="5" GridPane.rowIndex="21" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError26" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="22" />
+
+    <Label alignment="CENTER_LEFT" text="Value of pension or SIPPS in your name : " GridPane.columnIndex="2" GridPane.rowIndex="13" />
+    <TextField fx:id="pension_sipps_value" GridPane.columnIndex="3" GridPane.rowIndex="13" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError27" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="14" />
+
+    <Label alignment="CENTER_LEFT" text="Value of pension or SIPPS in partners name : " GridPane.columnIndex="4" GridPane.rowIndex="24" />
+    <TextField fx:id="partner_pension_sipps_value" GridPane.columnIndex="5" GridPane.rowIndex="24" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError28" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="25" />
+
+    <Label alignment="CENTER_LEFT" text="Death in service value for employer : " GridPane.columnIndex="2" GridPane.rowIndex="15" />
+    <TextField fx:id="dis_cover_value" GridPane.columnIndex="3" GridPane.rowIndex="15" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError29" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="16" />
+
+    <Label alignment="CENTER_LEFT" text="Death in service value for partners employer : " GridPane.columnIndex="4" GridPane.rowIndex="26" />
+    <TextField fx:id="partner_dis_cover_value" GridPane.columnIndex="5" GridPane.rowIndex="26" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError30" prefWidth="200" text="" GridPane.columnIndex="5" GridPane.rowIndex="27" />
+
+    <Label alignment="CENTER_LEFT" text="Your percentage of holiday assets : " GridPane.columnIndex="0" GridPane.rowIndex="19" />
+    <TextField fx:id="percentage_holiday_assets_value" GridPane.columnIndex="1" GridPane.rowIndex="19" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError31" prefWidth="200" text="" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+
+    <Label alignment="CENTER_LEFT" text="Partner's percentage of holiday assets : " GridPane.columnIndex="2" GridPane.rowIndex="19" />
+    <TextField fx:id="partner_percentage_holiday_assets_value" GridPane.columnIndex="3" GridPane.rowIndex="19" onKeyReleased="#keyRelease"/>
+    <Label fx:id="varcharError32" prefWidth="200" text="" GridPane.columnIndex="3" GridPane.rowIndex="20" />
+
+    <Label fx:id="addChildLabel" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="69.0" text="Add a child : " GridPane.columnIndex="2" GridPane.rowIndex="22" />
+    <Button fx:id="addbutton" onAction="#onAddButtonClick" prefWidth="90" text="Add" GridPane.columnIndex="3" GridPane.rowIndex="22" />
+
+
+    <Button fx:id="savebutton" onAction="#onSaveButtonClick" prefWidth="90" text="Save" GridPane.rowIndex="22" />
+    <Button fx:id="clearbutton" onAction="#onClearButtonClick" prefWidth="90" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="22" />
+
+    <Label fx:id="saveLabel" prefWidth="200" text="" GridPane.columnIndex="2" GridPane.rowIndex="21" />
+
+    <Label fx:id="viewingChildrenLabel" prefWidth="200" text="Children added:" GridPane.columnIndex="0" GridPane.rowIndex="21" />
+    <TableView fx:id="childtable" prefWidth="650" GridPane.columnIndex="0" GridPane.rowIndex="22">
+      <columns>
+          <TableColumn fx:id="childNo" text="Child"/>
+          <TableColumn fx:id="clientID" text="Clients ID"/>
+          <TableColumn fx:id="cFName" text="First name"/>
+          <TableColumn fx:id="cSName" text="Surname"/>
+          <TableColumn fx:id="cdob" text="Date of birth"/>
+          <TableColumn fx:id="ccntry" text="Country Of Residence"/>
+          <TableColumn fx:id="cBlngTo" text="Belongs to"/>
+      </columns>
+    </TableView>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+
+</GridPane>
